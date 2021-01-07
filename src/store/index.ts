@@ -4,7 +4,11 @@ export default createStore({
   state: {
     recentSort: "map",
   },
-  mutations: {},
+  mutations: {
+    setRecentSort(state, option) {
+      state.recentSort = option;
+    },
+  },
   actions: {},
   modules: {},
 });

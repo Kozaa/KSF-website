@@ -1,12 +1,27 @@
 <template>
-  <span class="option"> {{ text }}</span>
+  <span
+    :class="[{ selected: sortOption === text }, 'option']"
+    @click="setSortOption"
+  >
+    {{ text }}</span
+  >
 </template>
 
 <script>
+import { useStore } from "vuex";
+
 export default {
   name: "sortOption",
   props: {
     text: String,
+    sortOption: String,
+  },
+  setup(props) {
+    const store = useStore();
+
+    const setSortOption = () => store.commit("setRecentSort", props.text);
+
+    return { setSortOption };
   },
 };
 </script>
@@ -17,5 +32,10 @@ export default {
   font-size: 1.2rem;
   font-weight: 700;
   margin-left: 20px;
+  cursor: pointer;
+}
+
+.selected {
+  color: #1985e9;
 }
 </style>
