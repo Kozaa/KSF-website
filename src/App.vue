@@ -30,9 +30,13 @@ export default {
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
 
   color: white;
+  background-color: black;
+  background-image: url(./assets/images/mainBackground.png);
+  background-size: cover;
 
   display: flex;
   flex-direction: column;
@@ -41,6 +45,7 @@ body {
 
   #app {
     min-width: 100%;
+    min-height: 100vh;
   }
 }
 

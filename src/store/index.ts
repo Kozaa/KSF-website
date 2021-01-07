@@ -1,8 +1,10 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
+  state: {
+    recentSort: "map",
+  },
   mutations: {},
   actions: {},
-  modules: {}
+  modules: {},
 });
