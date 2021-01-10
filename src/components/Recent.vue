@@ -1,10 +1,11 @@
 <template>
   <div>
     <div>
-      <span class="title">Recent</span>
+      <SectionTitle>Recent</SectionTitle>
       <SortOption
         v-for="(option, i) in options"
         :key="i"
+        type="Recent"
         :text="option"
         :sortOption="recentSortOption"
       />
@@ -22,6 +23,7 @@
 <script lang="ts">
 import RecentMsg from "./RecentMsg.vue";
 import SortOption from "./SortOption.vue";
+import SectionTitle from "./SectionTitle.vue";
 import data from "../assets/data/data";
 import { useStore } from "vuex";
 import { computed } from "vue";
@@ -31,6 +33,7 @@ export default {
   components: {
     RecentMsg,
     SortOption,
+    SectionTitle,
   },
   setup() {
     console.log(data);
@@ -46,7 +49,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .msgFeed {
   width: auto;
   min-width: 100%;
@@ -54,10 +57,5 @@ export default {
   display: flex;
   align-items: center;
   overflow: hidden;
-}
-
-.title {
-  font-size: 1.6rem;
-  font-weight: 700;
 }
 </style>

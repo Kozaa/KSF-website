@@ -1,9 +1,9 @@
 <template>
   <main class="home">
     <Recent class="gridItem recent" />
+    <Servers class="gridItem servers" />
     <div class="gridItem">yo</div>
-    <div class="gridItem">yo</div>
-    <div class="gridItem">yo</div>
+
     <div class="gridItem">yo</div>
     <div class="gridItem">yo</div>
     <div class="gridItem">yo</div>
@@ -13,11 +13,13 @@
 
 <script lang="ts">
 import Recent from "../components/Recent.vue";
+import Servers from "../components/Servers.vue";
 
 export default {
   name: "Home",
   components: {
     Recent,
+    Servers,
   },
 };
 </script>
@@ -35,12 +37,18 @@ export default {
 .gridItem {
   width: 100%;
   height: 100%;
+  padding: 10px;
   border: 1px solid #6b6b6b;
 }
 
 .recent {
   grid-column: 1/3;
-  padding: 10px;
+
   padding-left: 20px;
+}
+
+.servers {
+  grid-row: 1/3;
+  grid-column: 3/4;
 }
 </style>

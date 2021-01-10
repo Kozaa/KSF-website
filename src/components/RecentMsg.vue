@@ -34,9 +34,9 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .wrapper {
-  /* white-space: nowrap; */
+  min-width: 210px;
   padding: 5px 20px;
   width: 25%;
 

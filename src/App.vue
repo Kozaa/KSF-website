@@ -25,7 +25,8 @@ export default {
 }
 
 :root {
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: calc(1vw);
 }
 
 body {

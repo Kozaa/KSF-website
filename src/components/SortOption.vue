@@ -13,13 +13,15 @@ import { useStore } from "vuex";
 export default {
   name: "sortOption",
   props: {
+    type: String,
     text: String,
     sortOption: String,
   },
   setup(props) {
     const store = useStore();
 
-    const setSortOption = () => store.commit("setRecentSort", props.text);
+    const setSortOption = () =>
+      store.commit(`set${props.type}Sort`, props.text);
 
     return { setSortOption };
   },
