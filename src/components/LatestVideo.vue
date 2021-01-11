@@ -1,10 +1,10 @@
 <template>
-  <div class="wrapper">
+  <div>
     <div class="details">
       <SectionTitle>
         Latest Video
       </SectionTitle>
-      <div class="subTitle">
+      <div>
         surf_eon_fix WR. Surfed by Makela.
       </div>
     </div>
@@ -34,8 +34,5 @@ export default {
 .details {
   padding: 10px 20px;
   height: 20%;
-}
-
-.subTitle {
 }
 </style>

@@ -11,9 +11,6 @@ export default {
   components: {
     Header,
   },
-  setup() {
-    console.log("yo");
-  },
 };
 </script>
 

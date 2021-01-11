@@ -7,9 +7,11 @@ export default createStore({
   },
   mutations: {
     setRecentSort(state, option) {
+      console.log("setRecentSort");
       state.recentSort = option;
     },
     setServersSort(state, option) {
+      console.log("setServerSort");
       state.serversSort = option;
     },
   },

@@ -4,7 +4,7 @@
       {{ name }}
     </span>
     <div class="detailsWrapper">
-      <div class="map">{{ map }}</div>
+      <div class="map" :title="map">{{ map }}</div>
       <div class="details">
         {{ details[0] }} players, {{ details[1] }}min left
       </div>

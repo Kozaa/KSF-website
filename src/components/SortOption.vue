@@ -1,7 +1,7 @@
 <template>
   <span
     :class="[{ selected: sortOption === text }, 'option']"
-    @click="setSortOption"
+    @click="clickHandeler"
   >
     {{ text }}</span
   >
@@ -17,13 +17,18 @@ export default {
     text: String,
     sortOption: String,
   },
-  setup(props) {
+  emits: ["nestedSetOptions"],
+  setup(props, { emit }) {
     const store = useStore();
 
     const setSortOption = () =>
       store.commit(`set${props.type}Sort`, props.text);
 
-    return { setSortOption };
+    const setTopOptions = () => emit("nestedSetOptions");
+
+    const clickHandeler = props.type ? setSortOption : setTopOptions;
+
+    return { clickHandeler };
   },
 };
 </script>

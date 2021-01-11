@@ -28,9 +28,6 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
-    console.log("recentmsg");
-  },
 });
 </script>
 

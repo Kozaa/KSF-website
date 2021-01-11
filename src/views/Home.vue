@@ -2,9 +2,9 @@
   <main class="home">
     <Recent class="gridItem recent" />
     <Servers class="gridItem servers" />
-    <LatestVideo class="" />
+    <LatestVideo class="gridItem" style="padding: 0;" />
 
-    <div class="gridItem">yo</div>
+    <Top class="gridItem" style="padding: 0;" />
     <div class="gridItem">yo</div>
     <div class="gridItem">yo</div>
     <div class="gridItem">yo</div>
@@ -15,6 +15,7 @@
 import Recent from "../components/Recent.vue";
 import Servers from "../components/Servers.vue";
 import LatestVideo from "../components/LatestVideo.vue";
+import Top from "../components/Top.vue";
 
 export default {
   name: "Home",
@@ -22,6 +23,7 @@ export default {
     Recent,
     Servers,
     LatestVideo,
+    Top,
   },
 };
 </script>

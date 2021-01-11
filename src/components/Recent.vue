@@ -36,9 +36,6 @@ export default {
     SectionTitle,
   },
   setup() {
-    console.log(data);
-    console.log("recent");
-
     const store = useStore();
     const recentSortOption = computed(() => store.state.recentSort);
 
