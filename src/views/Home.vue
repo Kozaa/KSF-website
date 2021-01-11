@@ -2,7 +2,7 @@
   <main class="home">
     <Recent class="gridItem recent" />
     <Servers class="gridItem servers" />
-    <div class="gridItem">yo</div>
+    <LatestVideo class="" />
 
     <div class="gridItem">yo</div>
     <div class="gridItem">yo</div>
@@ -14,12 +14,14 @@
 <script lang="ts">
 import Recent from "../components/Recent.vue";
 import Servers from "../components/Servers.vue";
+import LatestVideo from "../components/LatestVideo.vue";
 
 export default {
   name: "Home",
   components: {
     Recent,
     Servers,
+    LatestVideo,
   },
 };
 </script>

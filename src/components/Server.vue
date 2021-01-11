@@ -54,13 +54,13 @@ export default {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: solid white 1px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .map {
   font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .details {
