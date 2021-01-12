@@ -48,7 +48,7 @@ export default {
 }
 
 .detailsWrapper {
-  max-width: 50%;
+  width: 40%;
   display: inline-block;
   font-size: 1.2rem;
   padding-bottom: 10px;

@@ -1,22 +1,16 @@
 <template>
-  <span :class="[{ background: styleRank % 2 }, 'cell']">{{ styleRank }}</span>
-  <span :class="[{ background: styleRank % 2 }, 'cell']">{{
-    player.name
-  }}</span>
-  <span :class="[{ background: styleRank % 2 }, 'cell']">{{
-    player.stageWR
-  }}</span>
-  <span :class="[{ background: styleRank % 2 }, 'cell']">{{
-    player.mapWR
-  }}</span>
-  <span :class="[{ background: styleRank % 2 }, 'cell']">{{
+  <span :class="[{ background: i % 2 }, 'cell']">{{ styleRank }}</span>
+  <span :class="[{ background: i % 2 }, 'cell']">{{ player.name }}</span>
+  <span :class="[{ background: i % 2 }, 'cell']">{{ player.stageWR }}</span>
+  <span :class="[{ background: i % 2 }, 'cell']">{{ player.mapWR }}</span>
+  <span :class="[{ background: i % 2 }, 'cell']">{{
     player.points.toLocaleString()
   }}</span>
 </template>
 
 <script>
 export default {
-  props: ["player", "styleRank"],
+  props: ["player", "styleRank", "i"],
 };
 </script>
 

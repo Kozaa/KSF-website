@@ -5,9 +5,7 @@
     <LatestVideo class="gridItem" style="padding: 0;" />
 
     <Top class="gridItem" style="padding: 0;" />
-    <div class="gridItem">yo</div>
-    <div class="gridItem">yo</div>
-    <div class="gridItem">yo</div>
+    <Footer class="gridItem footer" />
   </main>
 </template>
 
@@ -16,6 +14,7 @@ import Recent from "../components/Recent.vue";
 import Servers from "../components/Servers.vue";
 import LatestVideo from "../components/LatestVideo.vue";
 import Top from "../components/Top.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "Home",
@@ -24,6 +23,7 @@ export default {
     Servers,
     LatestVideo,
     Top,
+    Footer,
   },
 };
 </script>
@@ -33,16 +33,17 @@ export default {
   width: 100%;
   height: calc(100vh - 130px);
   display: grid;
-  grid-template-columns: 40% 40% 20%;
+  grid-template-columns: 35% 43% 22%;
   grid-template-rows: 20% 65% 15%;
-  border: 1px solid #6b6b6b;
+  border-left: 1px solid #6b6b6b;
 }
 
 .gridItem {
   width: 100%;
   height: 100%;
   padding: 10px;
-  border: 1px solid #6b6b6b;
+  border-top: 1px solid #6b6b6b;
+  border-right: 1px solid #6b6b6b;
 }
 
 .recent {
@@ -54,5 +55,9 @@ export default {
 .servers {
   grid-row: 1/3;
   grid-column: 3/4;
+}
+
+.footer {
+  grid-column: 1/4;
 }
 </style>

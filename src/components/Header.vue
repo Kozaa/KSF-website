@@ -89,6 +89,11 @@ export default {
   .link {
     font-size: 2em;
     font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+      color: #ddd;
+    }
   }
 }
 

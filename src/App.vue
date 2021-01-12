@@ -23,7 +23,7 @@ export default {
 
 :root {
   /* font-size: 14px; */
-  font-size: calc(1vw);
+  font-size: calc(1vw - 2px);
 }
 
 body {

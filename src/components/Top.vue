@@ -1,7 +1,12 @@
 <template>
   <div class="wrapper">
     <TopOptions :options="optionState" @setOptions="handleSetOptions" />
-    <TopTable :data="sortedData" :style="style" />
+    <TopTable
+      :data="sortedData"
+      :options="optionState"
+      :style="style"
+      @setOptions="handleSetOptions"
+    />
   </div>
 </template>
 
@@ -24,7 +29,7 @@ interface Player {
 
 type Game = "CS:S" | "CS:GO";
 type Style = "forwards" | "half-sideways" | "sideways" | "backwards";
-type Category = "Points" | "Stage WR" | "Map WR";
+type Category = "Points" | "Stage WR" | "Map WR" | "Name" | "Rank";
 
 interface Options {
   game: Game;
@@ -53,7 +58,13 @@ export default {
     ) => {
       optionState.game = newGame;
       optionState.style = newStyle;
-      optionState.category = newCategory;
+      if (newCategory === "Rank") {
+        optionState.category = "Points";
+      } else if (newCategory === "Name") {
+        return;
+      } else {
+        optionState.category = newCategory;
+      }
     };
 
     const game = computed(() => (optionState.game === "CS:S" ? "CSS" : "CSGO"));
@@ -103,7 +114,7 @@ export default {
       players = players.sort(customSortCreator(style.value));
 
       if (category.value !== style.value) {
-        players = players.sort(customSortCreator(category.value));
+        players = players.sort(customSortCreator(category.value!));
       }
       console.log(players);
       return players;
